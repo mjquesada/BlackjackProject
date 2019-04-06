@@ -4,25 +4,30 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.skilldistillery.enums.solutions.cards.Card;
-
 public class Deck {
-	private List<Card> cards = new ArrayList<>(52);
+	private List<Card> cards = new ArrayList<>();
 
-	private List<Card> Deck() {
+	public Deck() {
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
 				Card c = new Card(rank, suit);
 				cards.add(c);
 			}
-		}
+		}System.out.println(cards.size());
 	}
 	
-	public void dealCard() {
-		cards.remove(0);
+	public Card dealCard() {
+		return cards.remove(0);
 	}
 	
 	public void shuffleDeck() {
 		Collections.shuffle(cards);
+	}
+	
+	public int checkDeckSize() {
+		int local; 
+		local = cards.size();
+		System.out.println(local);
+		return local; 
 	}
 }
