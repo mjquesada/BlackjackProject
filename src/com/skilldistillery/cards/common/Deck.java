@@ -13,9 +13,8 @@ public class Deck {
 				Card c = new Card(rank, suit);
 				cards.add(c);
 			}
-		}System.out.println(cards.size());
+		}
 	}
-	
 	public Card dealCard() {
 		return cards.remove(0);
 	}

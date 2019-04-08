@@ -24,5 +24,11 @@ public class Dealer extends PlayerBase {
 		this.deck = deck;
 	}
 	
+	public void showCardsInHand() {
+		for (Card card : this.getHand().getCards()) {
+			System.out.println(card);
+		}
+	}
+	
 	
 }
